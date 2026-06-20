@@ -6,7 +6,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <img
-          src="/Usama Abrar Profile Pic.png"
+          src="/Pic.png"
           alt="Usama Abrar"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           style={{ zIndex: 0 }}

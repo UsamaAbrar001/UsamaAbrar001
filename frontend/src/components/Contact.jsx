@@ -104,7 +104,7 @@ export default function Contact() {
 
           <div className="relative group cursor-pointer">
             <img
-              src="/Usama Abrar Profile Pic.png"
+              src="/Pic.png"
               alt="Usama Abrar"
               className="w-full aspect-[3/4] object-cover object-center grayscale contrast-[1.06] brightness-75"
             />

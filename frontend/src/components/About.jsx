@@ -38,7 +38,7 @@ export default function About() {
         <div className="grid grid-cols-[1fr_1fr] gap-20 items-start max-md:grid-cols-1 max-md:gap-9">
           <div className="about-reveal relative">
             <img
-              src="/Usama Abrar Profile Pic.png"
+              src="/Pic.png"
               alt="Usama Abrar"
               className="w-full aspect-[3/4] object-cover object-center grayscale contrast-[1.06]"
             />
