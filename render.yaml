@@ -32,4 +32,5 @@ services:
 
 databases:
   - name: usama-abrar-db
+    databaseName: usamaabrardb
     plan: free
