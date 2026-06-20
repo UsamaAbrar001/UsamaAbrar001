@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: usama-portfolio-backend
+    runtime: docker
+    repo: https://github.com/usamaabrar001/UsamaAbrar001
+    dockerfilePath: ./backend/Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: usama-portfolio-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        value: https://usama-portfolio-frontend.onrender.com
+
+  - type: web
+    name: usama-portfolio-frontend
+    runtime: static
+    repo: https://github.com/usamaabrar001/UsamaAbrar001
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_URL
+        value: https://usama-portfolio-backend.onrender.com
+
+databases:
+  - name: usama-portfolio-db
+    plan: free
+    databaseType: postgresql
+    ipAllowList: []
