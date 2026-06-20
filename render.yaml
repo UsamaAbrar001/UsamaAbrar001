@@ -33,5 +33,5 @@ services:
 databases:
   - name: usama-portfolio-db
     plan: free
-    databaseType: postgresql
+    databaseType: postgres
     ipAllowList: []
