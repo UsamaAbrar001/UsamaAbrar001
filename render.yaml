@@ -2,7 +2,7 @@ services:
   - type: web
     name: usama-portfolio-backend
     runtime: docker
-    repo: https://github.com/usamaabrar001/UsamaAbrar001
+    repo: https://github.com/UsamaAbrar001/UsamaAbrar001
     dockerfilePath: ./backend/Dockerfile
     plan: free
     envVars:
@@ -22,7 +22,7 @@ services:
   - type: web
     name: usama-portfolio-frontend
     runtime: static
-    repo: https://github.com/usamaabrar001/UsamaAbrar001
+    repo: https://github.com/UsamaAbrar001/UsamaAbrar001
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
     pullRequestPreviewsEnabled: true
